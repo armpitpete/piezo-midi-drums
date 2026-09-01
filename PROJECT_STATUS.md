@@ -4,7 +4,9 @@
 
 ### M0.1 — One Playable Pad
 
-Status: **READY TO BUILD**
+Status: **IN PROGRESS**
+
+Active work: **Issue #1 — protected single-piezo input**.
 
 ### Required outcome
 
@@ -17,9 +19,28 @@ One physical pad must:
 - survive hard strikes without exposing the ESP32 ADC to unsafe voltage;
 - support short rolls without obvious missed hits.
 
+## Issue #1 state
+
+Completed in repository:
+
+- GPIO0 confirmed as ESP32-C3 ADC1_CH0;
+- exact protected-input schematic documented;
+- diode orientation documented;
+- pre-power continuity procedure documented;
+- first-power test procedure documented;
+- firmware configured for GPIO0 with 12-bit / 11 dB ADC operation.
+
+Physical evidence still required:
+
+- fit 1 MΩ shunt;
+- fit 47 kΩ series resistor;
+- fit both Schottky clamps;
+- perform continuity/diode-mode checks;
+- confirm normal ESP32 boot with the protected input attached.
+
 ## Next action
 
-Build the protected single-piezo input from `docs/HARDWARE.md`, connect it to one ESP32-C3 ADC-capable pin, flash the serial hit-detector firmware, and collect a 100-hit test set.
+Build `hardware/PROTECTED_INPUT.md` exactly on breadboard/perfboard while unpowered, then record the continuity results in Issue #1 before applying USB power.
 
 ## Not yet in scope
 
