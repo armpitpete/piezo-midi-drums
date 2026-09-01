@@ -1,0 +1,23 @@
+name: Build task
+description: Track one bounded hardware, firmware, or test task.
+title: "[BUILD] "
+labels: []
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Required outcome
+      description: What must be true when this issue is complete?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance evidence
+      description: What measurement, test, or observation proves completion?
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
