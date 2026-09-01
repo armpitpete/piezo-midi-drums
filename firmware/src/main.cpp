@@ -12,7 +12,8 @@ uint8_t peakToVelocity(uint16_t peak) {
     return 0;
   }
 
-  const uint16_t capped = min<uint16_t>(peak, kVelocityCeilingRaw);
+  const uint16_t capped =
+      peak < kVelocityCeilingRaw ? peak : kVelocityCeilingRaw;
   const long mapped = map(
       capped,
       kTriggerThreshold,
