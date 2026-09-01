@@ -45,9 +45,11 @@ void setup() {
   delay(250);
 
   analogReadResolution(12);
+  analogSetPinAttenuation(kPiezoAdcPin, ADC_11db);
   pinMode(kPiezoAdcPin, INPUT);
 
   Serial.println("piezo-midi-drums M0.1 serial hit detector");
+  Serial.println("GPIO0 / ADC1_CH0, 12-bit, 11 dB attenuation");
   Serial.println("Verify protected input circuit before hard strikes.");
 }
 

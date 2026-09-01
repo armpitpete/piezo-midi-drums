@@ -4,8 +4,8 @@
 
 namespace drumkit {
 
-// IMPORTANT: verify this is an ADC-capable pin on the exact ESP32-C3 SuperMini
-// revision before wiring hardware. GPIO0 is only a prototype default.
+// ESP32-C3: GPIO0 is ADC1_CH0. On common SuperMini boards use the header
+// labelled 0 / IO0 / A0. Do not identify the pin by physical position alone.
 constexpr uint8_t kPiezoAdcPin = 0;
 
 constexpr uint16_t kAdcMax = 4095;
