@@ -1,0 +1,13 @@
+# PlatformIO
+firmware/.pio/
+firmware/.vscode/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local logs and captures
+*.log
+captures/
